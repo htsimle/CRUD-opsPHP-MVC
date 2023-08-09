@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>web Blogs</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- sidebar navigation component -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                        </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="allblogs.html"><i class="fas fa-home"></i>All Blogs</a>
+                </li>
+                <li>
+                    <a href="addBlog.html"><i class="fas fa-file-alt"></i>Add New Blog</a>
+                </li>
+                <li>
+                    <a href="updateblog.html"><i class="fas fa-chart-bar"></i>UPDATE BLOG</a>
+                </li>
+
+
+            </ul>
+        </nav>
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        <!-- <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav1" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-link"></i> <span>Quick Links</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu" aria-labelledby="nav1">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i> Access Logs</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back ups</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i> Updates</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i> Roles</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i> <span>Admin</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>UPDATE BLOG</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">    <label>search Blog by ID</label><br>
+</div><div class="mb-3">
+                                            <input type="text" id="upid" name="upid"  placeholder="Enter ID to search blog">
+    <button  type="button" onclick="fetchdataforupdate();" >Fetch</button>
+
+                                        </div>
+                                <div class="card-body">
+                                    <form accept-charset="utf-8">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Blog Title</label>
+                                            <input type="text" id="btitle" name="email" placeholder="Title" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Picture</label>
+                                            <input type="text" id="bpic" name="password" placeholder="picture" class="form-control" required>
+                                        </div>
+										 <div class="mb-3">
+                                            <label for="email" class="form-label">Discription</label>
+                                            <input type="email" id="bdisc" name="email" placeholder="Discription" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3"><button  type="button" onclick="updateblog();">update Blog</button>
+<button  type="button" onclick="deleteblog();">Delete Blog</button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/form-validator.js"></script>
+    <script src="assets/js/script.js"></script>
+	
+	
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script>
+
+function updateblog()
+{
+    var id = document.getElementById("upid").value;
+var title = document.getElementById("btitle").value;
+var pic = document.getElementById("bpic").value;
+var disc = document.getElementById("bdisc").value;
+
+/*
+alert("data added");
+alert("Title: " + title);
+alert("picture: " + pic);
+alert("Description: " + disc);
+alert("Time: " + time);
+*/
+
+
+$.post("controller.php", {
+			
+            upid : id,
+			title : title,
+			pic : pic,
+			disc : disc,
+		
+		
+			action : 'updateblogdata'
+			
+		}, function(result) {
+		
+			
+			alert("Data Added");
+			
+		});		
+
+}
+
+function fetchdataforupdate()
+{
+
+var updateid = document.getElementById("upid").value;
+
+
+
+$.post("controller.php", {
+	
+	
+	upid : updateid,
+	action : 'fetchdatabyid'
+	
+}, function(result) {
+
+	
+	var users = jQuery.parseJSON(result);
+	
+		for (var i = 0; i < users['title'].length; i++) {
+	
+
+			document.getElementById("btitle").value = users['title'][i];
+			document.getElementById("bpic").value = users['pic'][i];
+			document.getElementById("bdisc").value = users['disc'][i];
+
+		}
+		
+	
+});	
+
+}
+
+function deleteblog()
+{
+	var id = document.getElementById("upid").value;
+
+	
+	
+    $.post("controller.php", {
+			
+            upid : id,
+		
+		
+			action : 'updateblogdata'
+			
+		}, function(result) {
+		
+			
+			alert("Blog Deleted");
+			
+		});		
+}
+
+</script>
+
+
+</body>
+
+</html>

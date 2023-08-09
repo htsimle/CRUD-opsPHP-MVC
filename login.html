@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Another HTML Page</title>
+    <script>
+        function fetchUserData() {
+            var userId = localStorage.getItem('userId');
+            var name = localStorage.getItem('name');
+
+            // Use the retrieved data as needed
+            console.log('User ID:', userId);
+            console.log('Name:', name);
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchUserData;
+    </script>
+</head>
+<body>
+    <!-- Your HTML content here -->
+</body>
+</html>
